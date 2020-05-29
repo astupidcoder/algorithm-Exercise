@@ -15,10 +15,36 @@ public class ArrayFindItem {
         for(int i=0;i<array.length;i++){
             for(int j=0;j<array[i].length;j++){
                 if(array[i][j]==target){
+                    System.out.println("找到了--"+"i=="+i+",j=="+j);
                     return true;
                 }
             }
         }
         return false;
+    }
+
+
+
+    public static void main(String[] args){
+//        int [][]array={{4,1},{43,6}};
+//        ArrayFindItem arrayFindItem=new ArrayFindItem();
+//        arrayFindItem.Find(1,array);
+
+        reverse(new int[]{1,2,3,4,5,6});
+    }
+
+
+
+    //数据反转输出
+
+    public static int[] reverse(int[] list){
+        int[] result=new int[list.length];
+        for(int i=0;i<list.length;i++){
+            result[i]=list[list.length-i-1];
+        }
+        for (int m:result) {
+            System.out.println(m);
+        }
+        return result;
     }
 }
